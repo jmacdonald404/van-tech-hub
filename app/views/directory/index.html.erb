@@ -42,7 +42,7 @@
                   <div class="col s12 m12 l4">
                     <div class="card">
                       <div class="card-top">
-                        <a href="<%= organization_path(organization) %>" style="text-decoration: none;" class="round-button btn-floating btn-large waves-effect waves-light red"><%= image_tag organization.logo, class: "news-round" %></a>
+                        <a href="<%= organization_path(organization) %>" style="text-decoration: none;" class="round-button btn-floating btn-large waves-effect waves-light red"><% if organization.logo.present? %><%= image_tag organization.logo, class: "news-round" %><% end %></a>
                         <div class="card-title-block">
                           <a href="<%= organization_path(organization) %>" style="text-decoration: none;" class="card-title-text"><%= organization.name %></a>
                         </div>
